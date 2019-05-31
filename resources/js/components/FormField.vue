@@ -152,6 +152,16 @@
         }
     }
 
+    function setTextColorToolSettings(self, tools) {
+        if (self.field.toolSettings.textColor.activated === true) {
+            const TextColor = require('@rogierw/editor-js-text-color');
+
+            tools.raw = {
+                class: TextColor,
+            }
+        }
+    }
+
     function setEmbedToolSettings(self, tools) {
         if (self.field.toolSettings.embed.activated === true) {
             const Embed = require('@editorjs/embed');
@@ -199,6 +209,7 @@
                 setDelimiterToolSettings(self, tools);
                 setTableToolSettings(self, tools);
                 setRawToolSettings(self, tools);
+                setTextColorToolSettings(self, tools);
                 setEmbedToolSettings(self, tools);
 
                 var editor = new EditorJS({

@@ -111,6 +111,9 @@ class NovaEditorJs extends Field
                     case 'raw':
                         $htmlOutput .= view('nova-editor-js::raw', $block['data'])->render();
                         break;
+                    case 'textColor':
+                        $htmlOutput .= view('nova-editor-js::text-color', $block['data'])->render();
+                        break;
                     case 'embed':
                         $htmlOutput .= view('nova-editor-js::embed', $block['data'])->render();
                         break;

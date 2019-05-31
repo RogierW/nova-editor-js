@@ -95,6 +95,9 @@ return [
             'activated' => true,
             'placeholder' => '',
         ],
+        'textColor' => [
+            'activated' => true,
+        ],
         'embed' => [
             'activated' => true,
             'inlineToolbar' => true,
@@ -247,6 +250,12 @@ return [
                 ]
             ],
             'raw' => [
+                'html' => [
+                    'type' => 'string',
+                    'allowedTags' => '*',
+                ]
+            ],
+            'textColor' => [
                 'html' => [
                     'type' => 'string',
                     'allowedTags' => '*',
